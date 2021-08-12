@@ -1,0 +1,45 @@
+﻿@model NobatOnline.Areas.Makeuper.Models.ListBeautyModel
+@{
+    Layout = "~/Areas/Makeuper/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "List";
+}
+@section ViewScript{
+    <script>
+        CreateTable("BeautyTbl");
+    </script>
+}
+<Caption-Header asp-title="d" TitleFor="لیست آرایشگاه ها" IconFor="fa fa-user-md"></Caption-Header>
+<div class="row shadow-lg p-3">
+    <CreateNew-Button asp-link="/Makeuper/Beauty/List"></CreateNew-Button>
+    <table id="BeautyTbl" class="table table-hover text-center">
+        <thead>
+            <tr>
+                <th>نام آرایشگاه</th>
+                <th>تلفن همراه</th>
+                <th>نام شهر</th>
+                <th>آدرس</th>
+
+                <th><span class="fa fa-cog"></span></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.List)
+            {
+
+            <tr>
+                <td>@item.BeautyName</td>
+                <td>@item.Phone</td>
+                <td>@item.CityName</td>
+                <td>@item.Address</td>
+
+                <td>
+                    <Edit-Button asp-link="/Makeuper/Beauty/Create/@item.Id"></Edit-Button>&nbsp;
+                    <Remove-Button asp-link="/Makeuper/Beauty/Remove/@item.Id"></Remove-Button>
+                </td>
+
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

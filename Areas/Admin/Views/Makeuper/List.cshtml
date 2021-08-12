@@ -1,0 +1,56 @@
+﻿@model NobatOnline.Areas.Admin.Models.ListMakeuperModel
+@{
+    ViewData["Title"] = "List";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@section ViewScript{
+    <script>
+        CreateTable("BeautyTbl");
+    </script>
+}
+<Caption-Header asp-title="d" TitleFor="لیست آرایشگران" IconFor="fa fa-user-md"></Caption-Header>
+<div class="row shadow-lg p-3">
+    <CreateNew-Button asp-link="/Admin/Makeuper/Register"></CreateNew-Button>
+    <table id="BeautyTbl" class="table table-hover text-center">
+        <thead>
+            <tr>
+                <th>نام</th>
+                <th>نام خانوادگی</th>
+                <th>کدملی</th>
+                <th>تلفن همراه</th>
+                <th>نام کاربری</th>
+                <th>وضعیت حساب</th>
+                <th><span class="fa fa-cog"></span></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.List)
+            {
+
+                <tr>
+                    <td>@item.FirstName</td>
+                    <td>@item.LastName</td>
+                    <td>@item.NationalCode</td>
+                    <td>@item.PhoneNumber</td>
+                    <td>@item.UserName</td>
+                    <td><span class="fa fa-@item.IsActive"></span></td>
+                    <td>
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                                <span class="fa fa-cog"></span>
+                            </button>
+                            <ul class="dropdown-menu text-center p-3">
+                                <li><button class="btn btn-danger w-100" onclick="ConfirmDisable(@item.Id,'/Admin/Makeuper/DisableAccount')" type="button">غیر فعال کردن حساب</button></li>
+                                <li><button class="btn btn-success w-100" type="button" onclick="ConfirmEnable(@item.Id,'/Admin/Makeuper/EnableAccount')">فعال کردن حساب</button></li>
+                                @*<li><a class="btn btn-warning text-white w-100" href="/Admin/Makeuper/Edit/@item.Id">ویرایش حساب</a></li>
+                               
+                                <li><a class="btn btn-dark text-white w-100" href="/Admin/Pezeshk/Makeuper/@item.Id">ثبت / ویرایش مطب</a></li>*@
+
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

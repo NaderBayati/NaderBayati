@@ -1,0 +1,42 @@
+﻿@model NobatOnline.Areas.Makeuper.Models.ListWorkModel
+@{
+    ViewData["Title"] = "List";
+    Layout = "~/Areas/Makeuper/Views/Shared/_Layout.cshtml";
+}
+
+<Caption-Header TitleFor="لیست قیمت ها" IconFor="fa fa-map-marker" asp-title="d"></Caption-Header>
+<div class="row mx-auto w-50 p-3 shadow-lg">
+    <CreateNew-Button asp-link="/Makeuper/Work/Create"></CreateNew-Button>
+    <table id="WorkTbl" class="table table-hover text-center">
+        <thead>
+            <tr>
+                <th>نام آرایشگاه</th>
+                <th>عنوان</th>
+                <th>قیمت</th>
+                <th><span class="fa fa-cog"></span></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.List)
+            {
+            <tr>
+                <td>@item.BeautyName</td>
+                <td>@item.Onvan</td>
+                <td>@item.Price</td>
+
+                <td>
+                    <Edit-Button asp-link="/Makeuper/Work/Create/@item.Id"></Edit-Button>&nbsp;
+                    <Remove-Button asp-link="/Makeuper/Work/Remove/@item.Id"></Remove-Button>
+                </td>
+            </tr>
+            }
+        </tbody>
+        <tfoot></tfoot>
+    </table>
+</div>
+@section ViewScript{
+    <script>
+        CreateTable("WorkTbl");
+    </script>
+
+}

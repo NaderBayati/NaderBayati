@@ -1,0 +1,55 @@
+﻿@*@model NobatOnline.Areas.Admin.Models.MakeuperModel
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<Caption-Header asp-icon="d" TitleFor="ویرایش  پزشک" IconFor="fa fa-user-md"></Caption-Header>
+<form asp-area="Admin" asp-controller="Pezeshk" asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id"  />
+    <div class="row sw-100 w-75 p-3 shadow-lg mx-auto">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label asp-for="FirstName"></label>
+                <input type="text" asp-for="FirstName" class="form-control" />
+                <span class="text-danger" asp-validation-for="FirstName"></span>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label asp-for="LastName"></label>
+                <input type="text" asp-for="LastName" class="form-control" />
+                <span class="text-danger" asp-validation-for="LastName"></span>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <label asp-for="UserName"></label>
+                <input type="text" asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <label asp-for="NationalCode"></label>
+                <input type="text" asp-for="NationalCode" class="form-control" />
+                <span asp-validation-for="NationalCode" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <label asp-for="PhoneNumber"></label>
+                <input type="text" asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-lg-12 text-center">
+            <div asp-validation-summary="All" class="text-danger"></div>
+        </div>
+        <div class="col-lg-12 text-center">
+            <div class="btn-group text-center">
+                <button class="btn btn-success" type="submit">ذخیره اطلاعات</button>
+                <a href="/Admin/Pezeshk/List" class="btn btn-warning text-white">منصرف شدم</a>
+            </div>
+        </div>
+    </div>
+</form>*@

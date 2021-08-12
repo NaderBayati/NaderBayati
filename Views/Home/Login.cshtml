@@ -1,0 +1,45 @@
+@model NobatOnline.Models.LoginModel
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_BasicLayout.cshtml";
+}
+<div class="login-box">
+    <div class="login-logo">
+        <a href="../../index2.html"><b>ورود به سایت</b></a>
+    </div>
+    <!-- /.login-logo -->
+    <div class="card shadow-lg">
+        <div class="card-body login-card-body">
+            <p class="login-box-msg">فرم زیر را تکمیل کنید و ورود بزنید</p>
+            <form  asp-controller="Home" asp-action="Login" method="post">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label asp-for="UserName">نام کاربری</label>
+                            <input asp-for="UserName" type="text" class="form-control"  />
+                            <span class="text-danger" asp-validation-for="UserName" ></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label asp-for="Password">کلمه عبور</label>
+                            <input asp-for="Password" type="text" class="form-control"  />
+                            <span class="text-danger" asp-validation-for="Password" ></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-danger w-100 text-center"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <button type="submit" class="btn btn-primary btn-block btn-flat">ورود</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- /.login-card-body -->
+    </div>
+</div>

@@ -1,0 +1,36 @@
+﻿@model NobatOnline.Areas.Makeuper.Models.ListProvinceModel
+@{
+    ViewData["Title"] = "List";
+    Layout = "~/Areas/Makeuper/Views/Shared/_Layout.cshtml";
+}
+<Caption-Header TitleFor="لیست استان‌ها" IconFor="fa fa-map-marker" asp-title="d"></Caption-Header>
+<div class="row mx-auto w-50 p-3 shadow-lg">
+    <CreateNew-Button asp-link="/Makeuper/Province/Create"></CreateNew-Button>
+    <table id="ProvinceTbl" class="table table-hover text-center">
+        <thead>
+            <tr>
+                <th>نام</th>
+                <th><span class="fa fa-cog"></span></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.List)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>
+                        <Edit-Button asp-link="/Makeuper/Province/Create/@item.Id"></Edit-Button>&nbsp;
+                        <Remove-Button asp-link="/Makeuper/Province/Remove/@item.Id"></Remove-Button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+        <tfoot></tfoot>
+    </table>
+</div>
+@section ViewScript{
+    <script>
+        CreateTable("ProvinceTbl");
+    </script>
+
+}

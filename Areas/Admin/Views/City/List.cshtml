@@ -1,0 +1,38 @@
+﻿@model NobatOnline.Areas.Admin.Models.ListCityModel
+@{
+    ViewData["Title"] = "List";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@section ViewScript{
+    <script>
+        CreateTable("CityTbl");
+    </script>
+}
+<Caption-Header asp-title="d" TitleFor="لیست شهر ها" IconFor="fa fa-map-marker"></Caption-Header>
+<div class="row w-75 mx-auto shadow-lg p-3">
+    <CreateNew-Button asp-link="/Admin/City/Create"></CreateNew-Button>
+    <table id="CityTbl" class="table table-hover text-center">
+        <thead>
+            <tr>
+                <th>نام</th>
+                <th>نام استان</th>
+                <th><span class="fa fa-cog"></span></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.List)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.ProvinceName</td>
+                    <td>
+                        <Edit-Button asp-link="/Admin/City/Create/@item.Id"></Edit-Button>&nbsp;
+                        <Remove-Button asp-link="/Admin/City/Remove/@item.Id"></Remove-Button>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+

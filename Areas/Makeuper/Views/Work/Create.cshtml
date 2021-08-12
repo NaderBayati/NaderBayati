@@ -1,0 +1,36 @@
+﻿@model NobatOnline.Areas.Makeuper.Models.WorkModel
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Makeuper/Views/Shared/_Layout.cshtml";
+}
+<Caption-Header asp-title="d" TitleFor="ثبت / ویرایش قیمت" IconFor="fa fa-map-marker"></Caption-Header>
+<form asp-area="Makeuper" asp-controller="Work" asp-action="Create" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="row mx-auto w-50 p-3 shadow-lg">
+        <div class="col-lg-4">
+
+            <div class="form-group">
+                <label asp-for="BeautyId"></label>
+                <select asp-for="BeautyId" asp-items="Model.Beauty" class="form-control"></select>
+                <span class="text-danger" asp-validation-for="BeautyId"></span>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <label asp-for="onvan"></label>
+                <input type="text" asp-for="onvan" class="form-control" />
+                <span class="text-danger" asp-validation-for="onvan"></span>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <label asp-for="Price"></label>
+                <input type="text" asp-for="Price" class="form-control" />
+                <span class="text-danger" asp-validation-for="Price"></span>
+            </div>
+        </div>
+        <div class="form-group w-100 text-center">
+            <button type="submit" class="btn btn-success">ذخیره اطلاعات</button>
+        </div>
+    </div>
+</form>

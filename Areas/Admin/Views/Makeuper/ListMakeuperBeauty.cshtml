@@ -1,0 +1,44 @@
+﻿@*@model NobatOnline.Areas.Admin.Models.MakeuperModel
+@{
+    ViewData["Title"] = "ListPezeshkMatab";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+
+}
+@section ViewScript{
+    <script>
+        CreateTable("MatabTbl");
+    </script>
+}
+<Caption-Header asp-title="d" TitleFor="لیست مطب ها" IconFor="fa fa-user"></Caption-Header>
+<div class="row w-75 mx-auto shadow-lg p-3">
+    <table id="MatabTbl" class="table table-hover text-center">
+        <thead>
+            <tr>
+                <th>نام</th>
+                <th>تلفن</th>
+                <th>نام شهر</th>
+                <th>آدرس</th>
+                <th><span class="fa fa-cog"></span></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Phone</td>
+                    <td>@item.CityName</td>
+                    <td>@item.Address</td>
+                    <td>
+                        <button class="btn btn-danger" type="button" onclick="ConfirmRemove(@item.Id,'/Admin/Pezeshk/RemovePezeshkMatab')"><span class="fa fa-trash"></span></button>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>*@
+
+
+
+

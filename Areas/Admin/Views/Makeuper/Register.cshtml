@@ -1,0 +1,64 @@
+﻿@model NobatOnline.Areas.Admin.Models.MakeuperModel
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<Caption-Header asp-title="s" TitleFor="ثبت آرایشگر جدید" IconFor="fa fa-user-md"></Caption-Header>
+<form asp-area="Admin" asp-controller="Makeuper" asp-action="Register"   method="post">
+    <div class="row w-50 sw-100 mx-auto shadow-lg p-3">
+        <div class="col-lg-6">
+            <label asp-for="FirstName"></label>
+            <input type="text" asp-for="FirstName" class="form-control" />
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label asp-for="LastName"></label>
+                <input type="text" asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label asp-for="NationalCode"></label>
+                <input type="text" asp-for="NationalCode" class="form-control" />
+                <span asp-validation-for="NationalCode" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label asp-for="PhoneNumber"></label>
+                <input type="text" asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <label asp-for="UserName"></label>
+                <input type="text" asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <label asp-for="Password"></label>
+                <input type="text" asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <label asp-for="ConfirmPassword"></label>
+                <input type="text" asp-for="ConfirmPassword" class="form-control" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="text-danger" asp-validation-summary="All"></div>
+        <div class="col-lg-12">
+            <div class="btn-group">
+                <button class="btn btn-success" type="submit">ذخیره اطلاعات</button>
+                <a href="/Admin/Makeuper" class="btn btn-warning text-white">انصراف</a>
+            </div>
+        </div>
+    </div>
+</form>
