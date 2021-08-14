@@ -7,10 +7,13 @@ using DataLayer;
 using NobatOnline.Areas.Admin.Models;
 using Domains;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace NobatOnline.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles =Utilities.RoleNames.Administrator)]
+
     public class ProvinceController : Controller
     {
         private readonly NobatOnlineContext Context;

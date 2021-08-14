@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using DataLayer;
 using Domains;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -11,6 +12,7 @@ using NobatOnline.Areas.Makeuper.Models;
 namespace NobatOnline.Areas.Makeuper.Controllers
 {
     [Area("Makeuper")]
+    [Authorize(Roles =Utilities.RoleNames.Beautify)]
     public class WorkController : Controller
     {
         private readonly UserManager<AppUser> userManager;

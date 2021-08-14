@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using DataLayer;
 using Domains;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using NobatOnline.Areas.Admin.Models;
@@ -12,7 +13,7 @@ using NobatOnline.Areas.Admin.Models;
 namespace NobatOnline.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    
+    [Authorize(Roles =Utilities.RoleNames.Administrator)]
     public class CityController : Controller
     {
         private readonly NobatOnlineContext Context;

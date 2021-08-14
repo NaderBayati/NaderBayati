@@ -7,10 +7,12 @@ using DataLayer;
 using NobatOnline.Areas.Makeuper.Models;
 using Domains;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace NobatOnline.Areas.Makeuper.Controllers
 {
     [Area("Makeuper")]
+    [Authorize(Roles =Utilities.RoleNames.Beautify)]
     public class ProvinceController : Controller
     {
         private readonly NobatOnlineContext Context;
