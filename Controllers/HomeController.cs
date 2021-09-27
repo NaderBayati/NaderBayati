@@ -72,7 +72,7 @@ namespace NobatOnline.Controllers
                 }
                 else if (await UserManager.IsInRoleAsync(user, "Customer"))
                 {
-                    return Redirect("/Makeuper/Home");
+                    return Redirect("/Home/index");
                 }
                 return new StatusCodeResult(403);
             }

@@ -9,21 +9,16 @@ namespace NobatOnline.Areas.Makeuper.Models
 {
     public class TicketModel
     {
-        public TicketModel()
-        {
-            Beauty = new List<SelectListItem>();
-        }
-        public int Id { get; set; }
-        [Required(ErrorMessage = UserValidation.DayName)]
-        [Display(Name = UserDisplay.DayName)]
-        public string DayName { get; set; }
-        [Required(ErrorMessage = UserValidation.Date)]
-        [Display(Name = UserDisplay.Date)]
-        public DateTime Date { get; set; }
-
         [Required(ErrorMessage = UserValidation.TimeTicket)]
         [Display(Name = UserDisplay.TimeTicket)]
-        public string Time { get; set; }
+        public string StartTime { get; set; }
+        [Required(ErrorMessage = UserValidation.TimeTicket)]
+        [Display(Name = UserDisplay.TimeTicket)]
+        public string EndTime { get; set; }
+        [Required(ErrorMessage = UserValidation.TimeTicket)]
+        [Display(Name = UserDisplay.TimeTicket)]
+        public int SplitTime { get; set; }
+
         [Required(ErrorMessage = UserValidation.BeautyName)]
         [Display(Name = UserDisplay.BeautyName)]
         public int BeautyId { get; set; }

@@ -33,7 +33,13 @@ namespace NobatOnline.Areas.Makeuper.Controllers
         [HttpGet]
         public IActionResult List()
         {
-            var _listBeauty = Context.Beauties.Select(p =>  new {p.Id,p.BeautyName,CityName=p.City.Name,p.Phone,p.Address}).ToList();
+            var _listBeauty = Context.Beauties.Select(p =>  new {
+                p.Id,
+                p.BeautyName,
+                CityName=p.City.Name,
+                p.Phone,
+                p.Address
+                }).ToList();
             ListBeautyModel model = new ListBeautyModel();
             foreach (var item in _listBeauty)
             {
@@ -73,7 +79,7 @@ namespace NobatOnline.Areas.Makeuper.Controllers
 
             }
             PrepairCity(model.City);
-            return View(model);
+            return RedirectToAction("List");
         }
         [NonAction]
         public void PrepairCity(List<SelectListItem> model)

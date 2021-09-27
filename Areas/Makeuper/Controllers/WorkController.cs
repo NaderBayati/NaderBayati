@@ -12,7 +12,7 @@ using NobatOnline.Areas.Makeuper.Models;
 namespace NobatOnline.Areas.Makeuper.Controllers
 {
     [Area("Makeuper")]
-    [Authorize(Roles =Utilities.RoleNames.Beautify)]
+    [Authorize(Roles = Utilities.RoleNames.Beautify)]
     public class WorkController : Controller
     {
         private readonly UserManager<AppUser> userManager;
@@ -33,8 +33,12 @@ namespace NobatOnline.Areas.Makeuper.Controllers
         [HttpGet]
         public IActionResult List()
         {
-            var List = Context.Works.Select(p => new {
-                p.Id, p.Price, p.Onvan, BeautyName = p.Beauty.BeautyName
+            var List = Context.Works.Select(p => new
+            {
+                p.Id,
+                p.Price,
+                p.Onvan,
+                BeautyName = p.Beauty.BeautyName
             }).ToList();
             ListWorkModel model = new ListWorkModel();
             foreach (var item in List)
@@ -53,6 +57,7 @@ namespace NobatOnline.Areas.Makeuper.Controllers
         public IActionResult Create()
         {
             WorkModel model = new WorkModel();
+            PrepairBeauty(model.Beauty);
             return View(model);
         }
         [HttpPost]
@@ -70,13 +75,13 @@ namespace NobatOnline.Areas.Makeuper.Controllers
 
             }
             PrepairBeauty(model.Beauty);
-            return View(model);
+            return RedirectToAction("List");
         }
         [HttpGet]
-        public async Task<IActionResult>  Remove(int Id)
+        public async Task<IActionResult> Remove(int Id)
         {
-            var work =await Context.Works.FindAsync(Id);
-             Context.Works.Remove(work);
+            var work = await Context.Works.FindAsync(Id);
+            Context.Works.Remove(work);
             await Context.SaveChangesAsync();
             return RedirectToAction("List");
         }

@@ -70,7 +70,7 @@ using NobatOnline.Areas.Makeuper.Models;
             }
             );
             BeginContext(245, 97, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("Caption-Header", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7ea745cf1233478781627b4c78bf1c17", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("Caption-Header", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "53fe307c125840c4b66db2f934273d2b", async() => {
             }
             );
             __TagHelpers_CaptionHeaderTagHelper = CreateTagHelper<global::TagHelpers.CaptionHeaderTagHelper>();
@@ -92,7 +92,7 @@ using NobatOnline.Areas.Makeuper.Models;
             WriteLiteral("\r\n<div class=\"row w-75 mx-auto shadow-lg p-3\">\r\n    ");
             EndContext();
             BeginContext(394, 70, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("CreateNew-Button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e81d17eb00564b6a8024ce688df41501", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("CreateNew-Button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d175a2b703284346a8ae78bebc51d060", async() => {
             }
             );
             __TagHelpers_CreateNewButtonTagHelper = CreateTagHelper<global::TagHelpers.CreateNewButtonTagHelper>();
@@ -150,7 +150,7 @@ using NobatOnline.Areas.Makeuper.Models;
             WriteLiteral("</td>\r\n                    <td>\r\n                        ");
             EndContext();
             BeginContext(967, 69, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("Edit-Button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3782ab5784ec47ab94566cafc5bb56f1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("Edit-Button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8b4ff50c6d4d4057918217f4dad58825", async() => {
             }
             );
             __TagHelpers_EditButtonTagHelper = CreateTagHelper<global::TagHelpers.EditButtonTagHelper>();
@@ -177,7 +177,7 @@ using NobatOnline.Areas.Makeuper.Models;
             WriteLiteral("&nbsp;\r\n                        ");
             EndContext();
             BeginContext(1068, 73, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("Remove-Button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2d5ae525f09c4c108d169c8878434017", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("Remove-Button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "57055a22a05848b0933488ea6fb8e955", async() => {
             }
             );
             __TagHelpers_RemoveButtonTagHelper = CreateTagHelper<global::TagHelpers.RemoveButtonTagHelper>();

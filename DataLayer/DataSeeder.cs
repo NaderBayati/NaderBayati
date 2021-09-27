@@ -83,37 +83,7 @@ namespace DataLayer
                 }
                
             }
-            using (var context = new NobatOnlineContext())
-            {
-                if (!context.Users.Any())
-                {
-                    AppUser customer = new AppUser
-                    {
-                        FirstName = "Ali",
-                        LastName = "Haroni",
-                        CodeMeli = "5750094524",
-                        UserName = "Customer",
-                         
-                        PhoneNumber = "09132130569",
-                        Email = "AliHaroni1234@gmail.com"
-                    };
-                    var resultt = userManager.CreateAsync(customer, "@Customer1234").Result;
-
-                    if (resultt.Succeeded)
-                    {
-                        var resultRole = userManager.AddToRoleAsync(customer, Utilities.RoleNames.Customer).Result;
-                        if (!resultRole.Succeeded)
-                        {
-                            Console.ForegroundColor = ConsoleColor.Red;
-                            foreach (var item in resultRole.Errors)
-                            {
-                                Console.WriteLine(item.Description);
-                            }
-                            Console.ForegroundColor = ConsoleColor.White;
-                        }
-                    }
-                }
-            }
+           
         }
     }
 }

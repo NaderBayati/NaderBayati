@@ -68,7 +68,7 @@ using NobatOnline.Areas.Admin.Models;
             }
             );
             BeginContext(245, 97, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("Caption-Header", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "67cc6dc3f87b4cb38d17f01ffbc95739", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("Caption-Header", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ee8ec6eca3b3453b88e728ef92570d7b", async() => {
             }
             );
             __TagHelpers_CaptionHeaderTagHelper = CreateTagHelper<global::TagHelpers.CaptionHeaderTagHelper>();
@@ -90,7 +90,7 @@ using NobatOnline.Areas.Admin.Models;
             WriteLiteral("\r\n<div class=\"row shadow-lg p-3\">\r\n    ");
             EndContext();
             BeginContext(381, 73, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("CreateNew-Button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4eab959a605e4395bfbf2fbe0385af15", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("CreateNew-Button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4b295a0e0b9d47f98e509d32eda2a626", async() => {
             }
             );
             __TagHelpers_CreateNewButtonTagHelper = CreateTagHelper<global::TagHelpers.CreateNewButtonTagHelper>();

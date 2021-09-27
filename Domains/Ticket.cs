@@ -11,8 +11,9 @@ namespace Domains
         public int BeautyId { get; set; }
         public Beauty Beauty { get; set; }
         public DateTime Date { get; set; }
-        public string DayName { get; set; }
-        public string Time { get; set; }
+        public string StartTime { get; set; }
+        public string EndTime { get; set; }
+        public int SplitTime { get; set; }
         public ICollection<CustumerTicket> CustumerTickets { get; set; }
     }
 }

@@ -58,7 +58,7 @@ using NobatOnline.Areas.Admin.Models;
             WriteLiteral("<!DOCTYPE html>\r\n<html lang=\"en\">\r\n");
             EndContext();
             BeginContext(35, 859, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cf2693f5fe884238b5f6fa61bbe91d08", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cd6ee0e751a54c4090ea1c5a3d5c675f", async() => {
                 BeginContext(41, 846, true);
                 WriteLiteral(@"
     <meta charset=""utf-8"">
@@ -95,7 +95,7 @@ using NobatOnline.Areas.Admin.Models;
             WriteLiteral("\r\n\r\n");
             EndContext();
             BeginContext(898, 8772, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2734dd069b5b4d40b34aa2ab75837e4d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d800e904753c4823898544708af1400c", async() => {
                 BeginContext(941, 629, true);
                 WriteLiteral(@"
     <div class=""wrapper"">
@@ -113,7 +113,7 @@ using NobatOnline.Areas.Admin.Models;
                     ");
                 EndContext();
                 BeginContext(1570, 48, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5199cc79525247279dee3a2079ac2b0c", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "33bbfff57fc64186a55f2aaf69e3ee7a", async() => {
                     BeginContext(1610, 4, true);
                     WriteLiteral("ورود");
                     EndContext();
